@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    // setInterval(function() {
+    //     console.log("Vansh");
+    // }, 1000) //it will continuously runs as nothing stops it. setInterval will print infintely after time you mention.
+
+    // const sayDate = function(str){
+    //     console.log(str, Date.now());
+    // }
+    // const intervalId = setInterval(sayDate, 1000);
+    // clearInterval(intervalId)
+
+    const click = function()
+        {
+            console.log("Vansh");
+        }
+    let intervalId;
+    document.getElementById('start').addEventListener('click', function(){
+        intervalId = setInterval(click, 2000);
+    })
+    document.getElementById('stop').addEventListener('click', function(){
+        clearInterval(intervalId);
+    })
+</script>
+</html>
